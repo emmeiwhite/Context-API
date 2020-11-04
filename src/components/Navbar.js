@@ -5,8 +5,10 @@ class Navbar extends React.Component{
     static contextType = ThemeContext;
     render(){
         console.log(this.context); // Now this.context contains all our app-data
+        const {isLightTheme, dark, light} = this.context;
+        const theme = isLightTheme ? light : dark;
         return (
-            <header>
+            <header style={{background:theme.ui, color:theme.text}}>
                 <h3>BookList App</h3>
                  <nav>
                     <ul className="main-navigation">
