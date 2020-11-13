@@ -2,6 +2,7 @@ import './App.css';
 import BookList from './components/BookList';
 import Navbar from "./components/Navbar";
 import ThemeContextProvider from './contexts/ThemeContext';
+import ThemeToggler from './components/ThemeToggler';
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <div className="App">
           <Navbar/>
           <BookList/>
+          <ThemeToggler/>
       </div>
     </ThemeContextProvider>
   );

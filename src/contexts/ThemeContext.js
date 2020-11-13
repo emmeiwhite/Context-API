@@ -8,9 +8,15 @@ class ThemeContextProvider extends Component {
         dark:{text:'#ddd',bg:'#333',ui:'#555'}
     }
 
+    handleToggler = ()=>{
+        this.setState({
+            isLightTheme:!this.state.isLightTheme
+        })
+    }
+
     render() {
         return (
-            <ThemeContext.Provider value={{...this.state}}>
+            <ThemeContext.Provider value={{...this.state, handleToggler:this.handleToggler}}>
                 {this.props.children}
             </ThemeContext.Provider>
         )
